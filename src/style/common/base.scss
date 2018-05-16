@@ -1,29 +1,6 @@
 @charset 'utf-8';
-
-/* CSS Document */
-
-//SCSS全局变量
-// 默认移动端设计稿宽度
-$baseDevice: 750;
-// 前端切图移动端默认正常显示尺寸，默认为设计稿的一半
-$device: $baseDevice / 2;
-// 默认html font-size
-$baseFontSize: 100px;
-// scss function
-@function calc-percent($target, $context) {
-    @return $target/$context * 100%;
-}
-
-@function px2rem($px, $base-font-size: $baseDevice / $device * $baseFontSize) {
-    @if (unitless($px)) {
-        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
-        @return px2rem($px + 0px); // That may fail.
-    } @else if (unit($px) ==rem) {
-        @return $px;
-    }
-    @return ($px / $base-font-size) * 1rem;
-}
-
+/* reset v1.0 */
+html,
 body,
 h1,
 h2,
@@ -42,9 +19,13 @@ form,
 button,
 input,
 textarea,
+select,
+td,
 th,
-td {
-    font-weight: normal;
+blockquote,
+pre,
+fieldset,
+legend {
     margin: 0;
     padding: 0;
 }
@@ -53,17 +34,37 @@ body,
 button,
 input,
 select,
-textarea,
+textarea {
+    font: 12px/1.5 BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, tahoma, arial, sans-serif;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-i {
-    font: normal 12px "Helvetica Neue", "Microsoft YaHei", Helvetica, STHeiTi,sans-serif;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+b,
+cite,
+code,
+em,
+i,
+small,
+th {
+    font-size: 100%;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 ul,
@@ -72,78 +73,28 @@ li {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a:hover {
-    text-decoration: none;
+iframe {
+    display: block;
+    border: 0;
 }
 
 img {
-    vertical-align: top;
     border: 0;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 button,
 input,
+select,
 textarea {
     font-size: 100%;
-    vertical-align: middle;
     outline: none;
     border-radius: 0;
-    -webkit-appearance: none;
-}
-
-table {
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
-div,
-a {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-}
-
-html {
-    font-size: $baseFontSize;
-}
-
-@media screen and (min-width: 320px) {
-    html {
-        font-size: (320 / $device) * $baseFontSize;
-    }
-}
-
-@media screen and (min-width: 360px) {
-    html {
-        font-size: (360 / $device) * $baseFontSize;
-    }
-}
-
-@media screen and (min-width: 375px) {
-    html {
-        font-size: (375 / $device) * $baseFontSize;
-    }
-}
-
-@media screen and (min-width: 480px) {
-    html {
-        font-size: (480 / $device) * $baseFontSize;
-    }
-}
-
-@media screen and (min-width: 640px) {
-    html {
-        font-size: (640 / $device) * $baseFontSize;
-    }
-}
-
-@media screen and (min-width: 750px) {
-    html {
-        font-size: (750 / $device) * $baseFontSize;
-    }
 }
 
 .clearfloat:after {
@@ -162,3 +113,4 @@ html {
 .clearboth {
     clear: both;
 }
+/* reset v1.0 */

@@ -1,4 +1,5 @@
-/* CSS Document */
+/* reset v1.0 */
+html,
 body,
 h1,
 h2,
@@ -17,9 +18,13 @@ form,
 button,
 input,
 textarea,
+select,
+td,
 th,
-td {
-  font-weight: normal;
+blockquote,
+pre,
+fieldset,
+legend {
   margin: 0;
   padding: 0; }
 
@@ -27,77 +32,58 @@ body,
 button,
 input,
 select,
-textarea,
+textarea {
+  font: 12px/1.5 BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, tahoma, arial, sans-serif; }
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-i {
-  font: normal 12px "Helvetica Neue", "Microsoft YaHei", Helvetica, STHeiTi,sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; }
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+b,
+cite,
+code,
+em,
+i,
+small,
+th {
+  font-size: 100%;
+  font-style: normal; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
 
 ul,
 ol,
 li {
   list-style: none; }
 
-a {
-  text-decoration: none;
-  color: #333; }
-
-a:hover {
-  text-decoration: none; }
+iframe {
+  display: block;
+  border: 0; }
 
 img {
-  vertical-align: top;
-  border: 0; }
+  border: 0;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 button,
 input,
+select,
 textarea {
   font-size: 100%;
-  vertical-align: middle;
   outline: none;
-  border-radius: 0;
-  -webkit-appearance: none; }
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse; }
-
-div,
-a {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
-
-html {
-  font-size: 100px; }
-
-@media screen and (min-width: 320px) {
-  html {
-    font-size: 85.33333px; } }
-
-@media screen and (min-width: 360px) {
-  html {
-    font-size: 96px; } }
-
-@media screen and (min-width: 375px) {
-  html {
-    font-size: 100px; } }
-
-@media screen and (min-width: 480px) {
-  html {
-    font-size: 128px; } }
-
-@media screen and (min-width: 640px) {
-  html {
-    font-size: 170.66667px; } }
-
-@media screen and (min-width: 750px) {
-  html {
-    font-size: 200px; } }
+  border-radius: 0; }
 
 .clearfloat:after {
   font-size: 0;
@@ -112,5 +98,7 @@ html {
 
 .clearboth {
   clear: both; }
+
+/* reset v1.0 */
 
 /*# sourceMappingURL=maps/style.css.map */
