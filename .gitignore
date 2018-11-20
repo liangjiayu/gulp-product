@@ -6,6 +6,5 @@ npm-debug.log
 package-lock.json
 
 build/
-src/assets/css
-src/assets/js
+
 src/pages/
