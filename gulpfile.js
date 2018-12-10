@@ -35,7 +35,7 @@ var paths = {
     JS: 'src/assets/js/',
     views: 'src/views/',
     pages: 'src/pages/',
-    images: 'src/images/',
+    images: 'src/assets/images/',
     data: 'src/data/',
   },
   build: {
@@ -43,7 +43,7 @@ var paths = {
     CSS: 'build/assets/css/',
     JS: 'build/assets/js/',
     pages: 'build/pages/',
-    images: 'build/images/',
+    images: 'build/assets/images/',
     data: 'build/data/',
   },
 };
