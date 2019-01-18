@@ -37,6 +37,7 @@ var paths = {
     pages: 'src/pages/',
     images: 'src/assets/images/',
     data: 'src/data/',
+    Librarys: 'src/assets/Librarys/',
   },
   build: {
     root: 'build/',
@@ -45,6 +46,7 @@ var paths = {
     pages: 'build/pages/',
     images: 'build/assets/images/',
     data: 'build/data/',
+    Librarys: 'build/assets/Librarys/',
   },
 };
 
@@ -172,7 +174,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('watch', ['server'], function() {
-  var views = gulp.watch(
+  gulp.watch(
     [paths.src.views + '**/*.html', '!' + paths.src.views + 'public/*.html'],
     ['compileHtml']
   );
@@ -196,7 +198,13 @@ gulp.task('moveData', ['delbuild'], function() {
   return gulp.src(paths.src.data + '**/*').pipe(gulp.dest(paths.build.data));
 });
 
-gulp.task('moveScript', ['moveData'], function() {
+gulp.task('moveLib', ['moveData'], function() {
+  return gulp
+    .src(paths.src.Librarys + '**/*')
+    .pipe(gulp.dest(paths.build.Librarys));
+});
+
+gulp.task('moveScript', ['moveLib'], function() {
   return gulp
     .src(paths.src.JS + '*.js')
     .pipe(uglify())
