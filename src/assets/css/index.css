@@ -1,6 +1,5 @@
-.demo {
-  width: 200px;
-  height: 200px;
-  background: #000;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5); }
+.index-demo {
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: right; }
