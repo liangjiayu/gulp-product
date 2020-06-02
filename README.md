@@ -1,4 +1,4 @@
-### 特性定位
+## 特性定位
 
 - `es6`编译，`scss`编译，`html`模板编译
 - `css`，`js`压缩
@@ -6,7 +6,7 @@
 
 
 
-### 目录介绍
+## 目录介绍
 
 ```
 │  .editorconfig  
@@ -27,17 +27,10 @@
 ├─src
 │  ├─assets
 │  │  ├─css  // 编译后的css
-│  │  │      core.css
-│  │  │      goods.css
-│  │  │      index.css
 │  │  │      
 │  │  ├─images  // 图片
-│  │  │      .gitkeep
 │  │  │
 │  │  ├─js  // 编译后的js
-│  │  │      core.js
-│  │  │      global.js
-│  │  │      jquery.min.js
 │  │  │      
 │  │  └─Librarys // 可放置其他资源文件
 │  │      ├─fonts    
@@ -57,41 +50,26 @@
 │  │          
 │  ├─style
 │  │  ├─common
-│  │  │      iconfont.scss
-│  │  │      reset_mo.scss
-│  │  │      reset_pc.scss
 │  │  │      
 │  │  ├─libs  // 常用的插件样式 压缩成 code.css
 │  │  │      swiper.min.css
 │  │  │      
 │  │  └─module // 编译样式
-│  │          goods.scss
-│  │          index.scss
 │  │          
 │  └─views // 编译html
 │      │  index.html
-│      │  
-│      ├─Goods
-│      │      info.html
 │      │      
 │      └─public // 公用的模板
 │              footer.html
 │              head.html
 │              
 └─typings // 辅助vscode 语法提示
-    │  index.d.ts
-    │  
-    └─globals
-        └─jquery
-                index.d.ts
-                typings.json
-                
 
 ```
 
 
 
-### 如何使用
+## 如何使用
 
 ```bash
 # 安装依赖 
@@ -103,8 +81,6 @@ npm run serve
 # 进行打包
 npm run build
 ```
-
-
 
 
 
